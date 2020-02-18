@@ -88,6 +88,7 @@
   package:
     name: "newrelic-infra"
     state: "{{ nrinfragent_state }}"
+    lock_timeout: 180
   when: nrinfragent_os_name|lower != 'windows'
 
 - name: install integrations
